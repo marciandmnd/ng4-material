@@ -14,6 +14,7 @@ import {MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModul
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule, 
     FormsModule,
     HttpModule,
     MdButtonModule,

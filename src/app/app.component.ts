@@ -7,5 +7,12 @@ import { Http } from '@angular/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  
+  myData: Array<any>;
+
+  constructor(private http: Http) {
+    this.http.get('https://jsonplaceholder.typicode.com/photos')
+      .map(res => res.json())
+      .subscribe(res => this.myData = res);
+  }
 }
